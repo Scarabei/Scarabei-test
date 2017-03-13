@@ -9,9 +9,9 @@ import com.jfixby.scarabei.api.file.FileHash;
 import com.jfixby.scarabei.api.file.LocalFileSystem;
 import com.jfixby.scarabei.api.log.L;
 import com.jfixby.scarabei.aws.api.AWS;
-import com.jfixby.scarabei.aws.api.S3;
-import com.jfixby.scarabei.aws.api.S3FileSystem;
-import com.jfixby.scarabei.aws.api.S3FileSystemConfig;
+import com.jfixby.scarabei.aws.api.s3.S3;
+import com.jfixby.scarabei.aws.api.s3.S3FileSystem;
+import com.jfixby.scarabei.aws.api.s3.S3FileSystemConfig;
 
 public class UploadTest {
 
