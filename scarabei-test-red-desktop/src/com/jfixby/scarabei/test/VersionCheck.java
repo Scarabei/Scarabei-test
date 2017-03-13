@@ -1,5 +1,5 @@
 
-package com.jfixby.scarabei.red.desktop.test;
+package com.jfixby.scarabei.test;
 
 import com.jfixby.scarabei.api.ScarabeiAPIVersion;
 import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
