@@ -9,7 +9,7 @@ public class VersionCheck {
 
 	public static void main (final String[] args) {
 		ScarabeiDesktop.deploy();
-		L.d(ScarabeiAPIVersion.versionString);
+		L.d(ScarabeiAPIVersion.VERSION);
 
 	}
 

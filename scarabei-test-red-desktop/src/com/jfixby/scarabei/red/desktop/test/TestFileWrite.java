@@ -19,7 +19,7 @@ public class TestFileWrite {
 
 		final File testFile = LocalFileSystem.ApplicationHome().child("RW-test.txt");
 
-		String testString = MD5.md5String(System.currentTimeMillis() + "");
+		String testString = MD5.md5String(System.currentTimeMillis() + "").toString();
 		testString = testString.toLowerCase() + "-" + testString.toUpperCase();
 		testFile.writeString(testString);
 		testFile.writeString(testString);
