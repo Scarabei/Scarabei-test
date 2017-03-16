@@ -1,0 +1,3 @@
+include 'scarabei-test-red-aws'
+include 'scarabei-test-red-rmi'
+include 'scarabei-test-red-desktop'

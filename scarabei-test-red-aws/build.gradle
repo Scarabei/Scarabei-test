@@ -1,0 +1,5 @@
+dependencies {
+
+	         compile group: 'com.amazonaws', name: 'aws-java-sdk', version: '1.10.56'
+}	
+	
