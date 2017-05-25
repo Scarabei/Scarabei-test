@@ -7,7 +7,8 @@ sourceCompatibility = 1.8
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
     ext {
-        scarabeiVersion = 'af5fe98011'
+        scarabeiVersion = '1.4.0'
+                           
     }
 
     repositories {
@@ -19,15 +20,12 @@ sourceCompatibility = 1.8
     }
     
     dependencies {
-             compile "com.google.code.gson:gson:2.8.0"
-	         compile "com.github.Scarabei.Scarabei:scarabei-api:$scarabeiVersion"
+             compile "com.github.Scarabei.Scarabei:scarabei-api:$scarabeiVersion"
 	         compile "com.github.Scarabei.Scarabei:scarabei-red:$scarabeiVersion"
-	         
 	         compile "com.github.Scarabei.Scarabei:scarabei-api-desktop:$scarabeiVersion"
 	         compile "com.github.Scarabei.Scarabei:scarabei-red-desktop:$scarabeiVersion"
 	         
-	         compile "com.github.Scarabei.Scarabei:scarabei-aws-api:$scarabeiVersion"
-	         compile "com.github.Scarabei.Scarabei:scarabei-aws-red:$scarabeiVersion"
+	         
 	         
 
              testCompile 'junit:junit:4.10'

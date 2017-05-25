@@ -1,8 +1,17 @@
 dependencies {
+             
+             
+             compile "com.google.code.gson:gson:2.8.0"
+             compile "com.github.Scarabei.Scarabei:scarabei-rmi-api:$scarabeiVersion"
+             compile "com.github.Scarabei.Scarabei:scarabei-rmi-server:$scarabeiVersion"
+             compile "com.github.Scarabei.Scarabei:scarabei-rmi-client:$scarabeiVersion"
+	         
+	         
+	         testCompile 'junit:junit:4.10'
 
-	     
-}	
+}		
 	
+
 
 
 
