@@ -9,7 +9,6 @@
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/scarabei-api-desktop"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/scarabei-api-gwt"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/scarabei-api-ios"/>
-	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/scarabei-gson"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/scarabei-red"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/scarabei-red-android"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/scarabei-red-desktop"/>

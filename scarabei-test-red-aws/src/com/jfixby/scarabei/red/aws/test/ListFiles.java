@@ -3,12 +3,12 @@ package com.jfixby.scarabei.red.aws.test;
 
 import java.io.IOException;
 
-import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.aws.api.s3.S3;
 import com.jfixby.scarabei.aws.api.s3.S3Component;
 import com.jfixby.scarabei.aws.api.s3.S3FileSystem;
 import com.jfixby.scarabei.aws.api.s3.S3FileSystemConfig;
 import com.jfixby.scarabei.aws.desktop.s3.DesktopS3;
+import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 
 public class ListFiles {
 

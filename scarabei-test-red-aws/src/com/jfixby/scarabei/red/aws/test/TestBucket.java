@@ -9,9 +9,9 @@ import com.amazonaws.services.s3.model.ObjectListing;
 import com.amazonaws.services.s3.model.S3ObjectSummary;
 import com.jfixby.scarabei.api.collections.Collections;
 import com.jfixby.scarabei.api.collections.List;
-import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.api.util.Utils;
 import com.jfixby.scarabei.api.util.path.RelativePath;
+import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 
 public class TestBucket {
 
