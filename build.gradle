@@ -10,6 +10,9 @@ ext {
         scarabeiAPILevel = "F.2"
         scarabeiRedVersion = "F.2.0"
         scarabeiGsonVersion = "F.2.0"
+        scarabeiAwsAPILevel = "F.2.0"
+        scarabeiAwsDesktopVersion = "F.2.1"
+        
                            
 }
 
