@@ -7,7 +7,7 @@ public class ExempleObjectClass {
 
 	public static class ChildA {
 		public String A = "a";
-		ArrayList<String> v1 = new ArrayList<>();
+		ArrayList<String> v1 = new ArrayList<String>();
 
 		@Override
 		public boolean equals (final Object obj) {
@@ -54,7 +54,7 @@ public class ExempleObjectClass {
 
 		public String B = "b";
 
-		ArrayList<String> v2 = new ArrayList<>();
+		ArrayList<String> v2 = new ArrayList<String>();
 
 		public ChildB () {
 		}
@@ -115,7 +115,7 @@ public class ExempleObjectClass {
 		public String A = "a";
 		public String B = "b";
 		public String C = "c";
-		ArrayList<ChildB> v3 = new ArrayList<>();
+		ArrayList<ChildB> v3 = new ArrayList<ChildB>();
 
 		@Override
 		public boolean equals (final Object obj) {
