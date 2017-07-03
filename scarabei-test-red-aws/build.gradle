@@ -3,7 +3,7 @@ dependencies {
              //compile group: 'com.amazonaws', name: 'aws-java-sdk', version: '1.10.56'
              
              compile "com.google.code.gson:gson:2.8.0"
-	         compile "com.github.JFixby.ScarabeiAwsDesktop:scarabei-aws-desktop:$scarabeiAwsDesktopVersion"
+	         compile "com.github.Scarabei.ScarabeiAwsDesktop:scarabei-aws-desktop:$scarabeiAwsDesktopVersion"
 	         
 	         //compile group: 'com.amazonaws', name: 'aws-java-sdk', version: '1.11.103'
              testCompile 'junit:junit:4.10'
