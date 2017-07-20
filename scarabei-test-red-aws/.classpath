@@ -13,7 +13,6 @@
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/scarabei-red"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/scarabei-red-android"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/scarabei-red-desktop"/>
-	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/scarabei-red-gdx"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/scarabei-red-gwt"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/scarabei-red-ios"/>
 	<classpathentry kind="src" path="src"/>
