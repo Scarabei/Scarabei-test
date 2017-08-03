@@ -4,7 +4,7 @@ package com.jfixby.scarabei.red.desktop.test.generic_user;
 import com.jfixby.scarabei.api.collections.Collection;
 import com.jfixby.scarabei.api.collections.Collections;
 import com.jfixby.scarabei.api.collections.List;
-import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
+import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 
 public class Test {
 

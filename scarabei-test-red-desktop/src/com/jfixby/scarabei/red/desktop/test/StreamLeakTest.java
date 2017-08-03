@@ -4,10 +4,10 @@ package com.jfixby.scarabei.red.desktop.test;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
-import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.api.io.IO;
 import com.jfixby.scarabei.api.io.InputStream;
 import com.jfixby.scarabei.api.java.gc.GCFisher;
+import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 
 public class StreamLeakTest {
 

@@ -1,10 +1,10 @@
 
 package com.jfixby.scarabei.red.desktop.test;
 
-import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.api.java.gc.GCFisher;
 import com.jfixby.scarabei.api.java.gc.MemoryStatistics;
 import com.jfixby.scarabei.api.java.gc.MemoryStatisticsComparison;
+import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 
 public class GCFisherTest {
 

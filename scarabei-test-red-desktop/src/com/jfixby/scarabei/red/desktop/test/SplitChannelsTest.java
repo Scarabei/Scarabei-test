@@ -4,7 +4,6 @@ package com.jfixby.scarabei.red.desktop.test;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.api.desktop.ImageAWT;
 import com.jfixby.scarabei.api.file.File;
 import com.jfixby.scarabei.api.file.FileInputStream;
@@ -20,6 +19,7 @@ import com.jfixby.scarabei.api.io.GZipInputStream;
 import com.jfixby.scarabei.api.io.GZipOutputStream;
 import com.jfixby.scarabei.api.io.IO;
 import com.jfixby.scarabei.api.log.L;
+import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 
 public class SplitChannelsTest {
 

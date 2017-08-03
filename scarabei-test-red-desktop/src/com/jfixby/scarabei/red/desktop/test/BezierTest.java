@@ -3,11 +3,11 @@ package com.jfixby.scarabei.red.desktop.test;
 
 import org.junit.Test;
 
-import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.api.geometry.Bezier;
 import com.jfixby.scarabei.api.geometry.CanvasPosition;
 import com.jfixby.scarabei.api.geometry.Geometry;
 import com.jfixby.scarabei.api.log.L;
+import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 
 public class BezierTest {
 

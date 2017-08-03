@@ -1,18 +1,16 @@
 
 package com.jfixby.scarabei.examples.json;
 
-import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.api.json.Json;
 import com.jfixby.scarabei.api.json.JsonString;
 import com.jfixby.scarabei.api.log.L;
 import com.jfixby.scarabei.examples.json.ExempleObjectClass.ChildB;
-import com.jfixby.scarabei.gson.GoogleGson;
+import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 
 public class GsonExample {
 
 	public static void main (final String[] args) {
 		ScarabeiDesktop.deploy();
-		Json.installComponent(new GoogleGson());
 // Json.installComponent("com.jfixby.scarabei.gson.GoogleGson"); - dynamic class linking
 // Json.installComponent(new RedGdxJson()); - an alternative implementation
 

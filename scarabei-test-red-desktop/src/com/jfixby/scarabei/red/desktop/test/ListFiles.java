@@ -3,9 +3,9 @@ package com.jfixby.scarabei.red.desktop.test;
 
 import java.io.IOException;
 
-import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.api.file.LocalFileSystem;
 import com.jfixby.scarabei.api.file.LocalFileSystemComponent;
+import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 
 public class ListFiles {
 

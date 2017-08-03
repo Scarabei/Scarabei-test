@@ -4,7 +4,6 @@ package com.jfixby.scarabei.red.desktop.test;
 import java.io.IOException;
 
 import com.jfixby.scarabei.api.collections.Collections;
-import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.api.file.File;
 import com.jfixby.scarabei.api.file.LocalFileSystem;
 import com.jfixby.scarabei.api.file.packing.CompressionMethod;
@@ -13,6 +12,7 @@ import com.jfixby.scarabei.api.file.packing.FileSystemPackingSpecs;
 import com.jfixby.scarabei.api.io.OutputStream;
 import com.jfixby.scarabei.api.json.Json;
 import com.jfixby.scarabei.api.log.L;
+import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.red.filesystem.archived.R3ArrayCompressionMethod;
 import com.jfixby.scarabei.red.filesystem.archived.RedFileSystemPacker;
 

@@ -3,17 +3,15 @@ package com.jfixby.scarabei.red.desktop.test.json;
 
 import java.util.ArrayList;
 
-import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.api.json.Json;
 import com.jfixby.scarabei.api.json.JsonString;
 import com.jfixby.scarabei.api.log.L;
-import com.jfixby.scarabei.gson.GoogleGson;
+import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 
 public class GsonTest {
 
 	public static void main (final String[] args) {
 		ScarabeiDesktop.deploy();
-		Json.installComponent(new GoogleGson());
 
 		final GsonTest testObject = new GsonTest();
 		testObject.Ca.v1.add("x");

@@ -8,7 +8,7 @@ import com.jfixby.scarabei.api.assets.Names;
 import com.jfixby.scarabei.api.collections.Collections;
 import com.jfixby.scarabei.api.collections.List;
 import com.jfixby.scarabei.api.collections.Map;
-import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
+import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 
 public class MapRemoveTest {
 

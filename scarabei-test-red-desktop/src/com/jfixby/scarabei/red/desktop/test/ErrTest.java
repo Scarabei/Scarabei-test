@@ -2,8 +2,8 @@
 package com.jfixby.scarabei.red.desktop.test;
 
 import com.jfixby.scarabei.api.debug.Debug;
-import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.api.log.L;
+import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 
 public class ErrTest {
 

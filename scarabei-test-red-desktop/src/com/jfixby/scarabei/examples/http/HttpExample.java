@@ -3,14 +3,14 @@ package com.jfixby.scarabei.examples.http;
 
 import java.io.IOException;
 
-import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
 import com.jfixby.scarabei.api.java.ByteArray;
 import com.jfixby.scarabei.api.log.L;
 import com.jfixby.scarabei.api.net.http.Http;
 import com.jfixby.scarabei.api.net.http.HttpConnection;
 import com.jfixby.scarabei.api.net.http.HttpConnectionInputStream;
 import com.jfixby.scarabei.api.net.http.HttpURL;
-import com.jfixby.scarabei.api.util.JUtils;
+import com.jfixby.scarabei.api.strings.Strings;
+import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 
 public class HttpExample {
 
@@ -38,7 +38,7 @@ public class HttpExample {
 		is.open();
 		try {
 			final ByteArray data = is.readAll();
-			stringData = JUtils.newString(data, "UTF-8");
+			stringData = Strings.newString(data, "UTF-8");
 		} catch (final Exception e) {
 			L.e(e);
 		}
