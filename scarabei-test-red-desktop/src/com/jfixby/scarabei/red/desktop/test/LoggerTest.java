@@ -13,9 +13,9 @@ public class LoggerTest {
 		ScarabeiDesktop.deploy();
 // SystemSettings.setExecutionMode(ExecutionMode.PUBLIC_RELEASE);
 		L.d("hello");
+		L.d("hello", "xxx");
 		L.e("hello");
-		L.e("hello");
-		L.e("hello");
+		L.e("hello", "xxx");
 
 		final List<String> list = Collections.newList();
 		list.add("A");
@@ -31,13 +31,16 @@ public class LoggerTest {
 		L.d("map", map);
 
 		Again.again();
+		Again.roll();
 	}
 
 	public static class Again {
 
 		static void again () {
 			L.d("hello");
+			L.d("hello", "xxx");
 			L.e("hello");
+			L.e("hello", "xxx");
 
 			final List<String> list = Collections.newList();
 			list.add("A");
@@ -51,6 +54,10 @@ public class LoggerTest {
 			map.put("C", "3");
 
 			L.d("map", map);
+		}
+
+		public static void roll () {
+			again();
 		}
 
 	}
