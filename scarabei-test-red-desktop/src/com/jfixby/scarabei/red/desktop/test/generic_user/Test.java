@@ -18,7 +18,7 @@ public class Test {
 		x.add(0.5d);
 		x.add(0.5d);
 
-		x.print("x");
+// x.print("x");
 
 		final Collection<Comparable<Double>> y = (Collection<Comparable<Double>>)(Collection<? extends Comparable<Double>>)x;
 		sort(y);

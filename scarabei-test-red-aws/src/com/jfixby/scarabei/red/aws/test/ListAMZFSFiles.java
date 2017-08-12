@@ -24,11 +24,11 @@ public class ListAMZFSFiles {
 
 // specs.setBucketName("jfix.by");// amzfs
 
-		fileSystem.ROOT().listDirectChildren()//
-			.print("root" + " direct");
-
-		fileSystem.ROOT().listAllChildren()//
-			.print("root" + " all");
+// fileSystem.ROOT().listDirectChildren()//
+// .print("root" + " direct");
+//
+// fileSystem.ROOT().listAllChildren()//
+// .print("root" + " all");
 
 	}
 

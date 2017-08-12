@@ -42,7 +42,7 @@ public class UploadTest {
 			}
 		});
 
-		remote.listDirectChildren().print("remote");
+// remote.listDirectChildren().print("remote");
 
 		L.d("remote.png", remote.child("sprite2.png").calculateHash());
 		L.d("sprite2.png", local.child("sprite2.png").calculateHash());

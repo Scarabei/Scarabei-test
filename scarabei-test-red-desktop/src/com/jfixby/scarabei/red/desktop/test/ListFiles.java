@@ -14,13 +14,11 @@ public class ListFiles {
 
 		final LocalFileSystemComponent fileSystem = LocalFileSystem.invoke();
 
-		fileSystem.ROOT().listDirectChildren().print("root");
-
-		fileSystem.ROOT().child("[SHIT]").listDirectChildren()//
-			.print("root" + " direct");
-
-		fileSystem.ROOT().child("[SHIT]").listAllChildren()//
-			.print("root" + " all");
+// fileSystem.ROOT().child("[SHIT]").listDirectChildren()//
+// .print("root" + " direct");
+//
+// fileSystem.ROOT().child("[SHIT]").listAllChildren()//
+// .print("root" + " all");
 
 	}
 

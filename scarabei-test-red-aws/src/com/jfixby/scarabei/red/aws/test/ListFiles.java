@@ -22,9 +22,6 @@ public class ListFiles {
 		specs.setBucketName("com.red-triplane.assets");//
 		final S3FileSystem fileSystem = s3.newFileSystem(specs);
 
-		fileSystem.ROOT().listDirectChildren()//
-			.print("root" + " direct");
-
 	}
 
 }

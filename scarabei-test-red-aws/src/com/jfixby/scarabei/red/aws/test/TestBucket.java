@@ -28,7 +28,7 @@ public class TestBucket {
 
 		final ObjectListing objectListing = s3.listObjects(request);
 		final List<String> prefixes = Collections.newList(objectListing.getCommonPrefixes());
-		prefixes.print("prefixes");
+// prefixes.print("prefixes");
 
 		final List<S3ObjectSummary> summs = Collections.newList(objectListing.getObjectSummaries());
 

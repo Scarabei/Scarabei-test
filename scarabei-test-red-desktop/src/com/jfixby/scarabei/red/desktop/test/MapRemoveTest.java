@@ -25,7 +25,7 @@ public class MapRemoveTest {
 			map.put(key, value);
 		}
 
-		map.print("map");
+// map.print("map");
 		int k = -10;
 		while (map.size() > 0) {
 			k++;
@@ -33,7 +33,7 @@ public class MapRemoveTest {
 			map.remove(key);
 		}
 
-		map.print("map2");
+// map.print("map2");
 
 		assert (map.size() == 0);
 

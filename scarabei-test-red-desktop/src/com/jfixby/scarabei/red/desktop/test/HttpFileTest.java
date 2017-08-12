@@ -38,7 +38,6 @@ public class HttpFileTest {
 		final File root = fs.ROOT();
 		root.isFolder();
 		//
-		root.listAllChildren().print("list");
 
 		final File download = LocalFileSystem.ApplicationHome().child("download");
 		download.makeFolder();

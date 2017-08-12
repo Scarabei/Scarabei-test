@@ -28,10 +28,6 @@ public class DownloadImagesTest {
 
 		S3.copyFolderContentsToFolder(remote, local);
 
-		local.listDirectChildren().print("output direct");
-
-		local.listAllChildren().print("output all");
-
 	}
 
 }

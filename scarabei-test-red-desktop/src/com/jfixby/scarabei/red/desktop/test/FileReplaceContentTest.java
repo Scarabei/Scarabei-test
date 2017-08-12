@@ -52,7 +52,6 @@ public class FileReplaceContentTest {
 
 		}
 
-		filesToFix.print("filesToFix");
 		Sys.exit();
 
 		for (int i = 0; i < filesToFix.size(); i++) {

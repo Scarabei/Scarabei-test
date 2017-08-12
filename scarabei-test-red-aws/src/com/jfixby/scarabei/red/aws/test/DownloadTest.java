@@ -39,10 +39,10 @@ public class DownloadTest {
 				return false;
 			}
 		});
-
-		local.listDirectChildren().print("output direct");
-
-		local.listAllChildren().print("output all");
+//
+// local.listDirectChildren().print("output direct");
+//
+// local.listAllChildren().print("output all");
 
 	}
 

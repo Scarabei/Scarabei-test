@@ -17,7 +17,6 @@ public class FixDartImports {
 // final File folder = LocalFileSystem.newFile("D:\\ScarabeiDart\\ScarabeiDart");
 		final File folder = LocalFileSystem.newFile("D:\\DaaNuu\\van_mobile_app");
 		final FilesList dartFiles = folder.listAllChildren(file -> file.extensionIs("dart"));
-		dartFiles.print("dartFiles");
 
 		for (final File file : dartFiles) {
 			final String data = file.readToString();

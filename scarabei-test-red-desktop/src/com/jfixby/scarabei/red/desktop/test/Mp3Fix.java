@@ -22,6 +22,5 @@ public class Mp3Fix {
 				e1.printStackTrace();
 			}
 		});
-		not_procesed.print("renamed");
 	}
 }

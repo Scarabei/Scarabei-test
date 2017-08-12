@@ -16,15 +16,12 @@ public class RestRelativePath {
 
 		final RelativePath path = Utils.newRelativePath(desktopAssemblerRelativePathString);
 		L.d("path", path);
-		path.steps().print("steps");
 
 		final RelativePath parent = path.parent();
 		L.d("parent", parent);
-		parent.steps().print("steps");
 
 		final RelativePath rem = parent.removeStep(0);
 		L.d("rem", rem);
-		rem.steps().print("rem");
 	}
 
 }
