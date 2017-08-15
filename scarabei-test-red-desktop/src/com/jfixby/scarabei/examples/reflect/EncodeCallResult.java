@@ -1,3 +1,4 @@
+package com.jfixby.scarabei.examples.reflect;
 import java.util.ArrayList;
 
 import com.jfixby.scarabei.api.codecs.Codecs;
