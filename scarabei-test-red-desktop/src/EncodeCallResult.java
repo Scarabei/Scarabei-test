@@ -11,6 +11,7 @@ import com.jfixby.scarabei.api.names.Names;
 import com.jfixby.scarabei.api.sys.Sys;
 import com.jfixby.scarabei.api.sys.settings.ExecutionMode;
 import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
+import com.jfixby.scarabei.red.reflect.JavaMethodCallResult;
 
 public class EncodeCallResult {
 
@@ -32,6 +33,12 @@ public class EncodeCallResult {
 
 		test.put("L", list);
 		L.d("info", test);
+		final JavaMethodCallResult result = new JavaMethodCallResult();
+		result.error = new Exception("");
+		result.success = true;
+		result.result = Sys.getSystemInfo();
+		Codecs.encode(result);
+
 		final EncodedObject encodeed = Codecs.encode(test);
 // final EncodedObject encodeed = Codecs.encode(null);
 		final JsonString enc = Json.serializeToString(encodeed);
