@@ -29,7 +29,7 @@ public class FindBigSourceFiles {
 		final List<File> longFiles = Collections.newList();
 		for (final File f : sourceFiles) {
 			final List<String> lines = Strings.split(f.readToString(), "\n").filter(line -> !line.startsWith("import"));
-			if (lines.size() > 150) {
+			if (lines.size() > 100) {
 // L.d("" + f.getName(), lines);
 
 				longFiles.add(f);
