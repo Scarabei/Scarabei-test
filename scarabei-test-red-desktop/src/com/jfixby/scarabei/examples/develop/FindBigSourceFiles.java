@@ -28,7 +28,7 @@ public class FindBigSourceFiles {
 // L.d("", dartFiles);
 		final List<File> longFiles = Collections.newList();
 		for (final File f : sourceFiles) {
-			final List<String> lines = Strings.split(f.readToString(), "\n");
+			final List<String> lines = Strings.split(f.readToString(), "\n").filter(line -> !line.startsWith("import"));
 			if (lines.size() > 150) {
 // L.d("" + f.getName(), lines);
 
