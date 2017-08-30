@@ -1,5 +1,5 @@
 
-package com.jfixby.scarabei.red.desktop.test;
+package com.jfixby.scarabei.examples.develop;
 
 import java.io.IOException;
 
@@ -23,10 +23,11 @@ public class FindBigSourceFiles {
 
 		final File project = LocalFileSystem.newFile("D:\\DaaNuu\\van_mobile_app");
 // final File project = LocalFileSystem.newFile("D:\\DaaNuu\\van_shared");
-		final FilesList dartFiles = project.listAllChildren(file -> file.extensionIs("dart"));
+		final FilesList sourceFiles = project.listAllChildren(
+			file -> file.extensionIs("dart") || (file.extensionIs("java") && !file.nameWithoutExtension().equals("R")));
 // L.d("", dartFiles);
 		final List<File> longFiles = Collections.newList();
-		for (final File f : dartFiles) {
+		for (final File f : sourceFiles) {
 			final List<String> lines = Strings.split(f.readToString(), "\n");
 			if (lines.size() > 150) {
 // L.d("" + f.getName(), lines);
