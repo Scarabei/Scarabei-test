@@ -2,77 +2,36 @@
 package com.jfixby.scarabei.examples.btc.round2;
 
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.util.Comparator;
 
 import com.jfixby.scarabei.api.collections.Collections;
 import com.jfixby.scarabei.api.collections.EditableCollection;
 import com.jfixby.scarabei.api.collections.List;
 import com.jfixby.scarabei.api.collections.Set;
-import com.jfixby.scarabei.api.file.File;
-import com.jfixby.scarabei.api.file.LocalFileSystem;
-import com.jfixby.scarabei.api.json.Json;
-import com.jfixby.scarabei.api.json.JsonString;
 import com.jfixby.scarabei.api.log.L;
 import com.jfixby.scarabei.api.strings.Strings;
 import com.jfixby.scarabei.api.sys.settings.ExecutionMode;
 import com.jfixby.scarabei.api.sys.settings.SystemSettings;
+import com.jfixby.scarabei.examples.btc.coinmarket.Coinmarketcap;
+import com.jfixby.scarabei.examples.btc.coinmarket.Entry;
 import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 
 class BTC2 {
 
-	private static Comparator<BTC2> by24HGrowth = new Comparator<BTC2>() {
+	private static Comparator<Entry> by24HGrowth = new Comparator<Entry>() {
 
 		@Override
-		public int compare (final BTC2 o1, final BTC2 o2) {
+		public int compare (final Entry o1, final Entry o2) {
 			return o1.percent_change_24h.compareTo(o2.percent_change_24h) * 0;
 		}
 	};
-	String id;
-	String symbol;
-	int rank;
-	BigDecimal price_usd;
-	BigDecimal market_cap_usd;
-	BigDecimal price_eur;
-	BigDecimal market_cap_eur;
-	BigDecimal percent_change_24h = BigDecimal.valueOf(Integer.MIN_VALUE);
-	BigDecimal BD_100 = BigDecimal.valueOf(100);
-
-	public String toCSV () {
-		return this.rank + "	" + this.id + "	" + this.symbol + "	" + this.price_eur + "	" + this.market_cap_eur + "	"
-			+ this.percent_change_24h.divide(this.BD_100) + "	" + 1;
-	}
-
-	public String toCSV (final double amount) {
-		return this.rank + "	" + this.id + "	" + this.symbol + "	" + this.price_eur + "	" + this.market_cap_eur + "	"
-			+ this.percent_change_24h.divide(this.BD_100) + "	" + amount;
-	}
-
-	@Override
-	public String toString () {
-		return "BTC2 [id=" + this.id + ", symbol=" + this.symbol + ", rank=" + this.rank + ", price_usd=" + this.price_usd
-			+ ", market_cap_usd=" + this.market_cap_usd + ", price_eur=" + this.price_eur + ", market_cap_eur=" + this.market_cap_eur
-			+ " percent_change_24h=" + this.percent_change_24h + "]";
-	}
 
 	public static void main (final String[] args) throws IOException {
 		ScarabeiDesktop.deploy();
 		SystemSettings.setExecutionMode(ExecutionMode.DEMO);
-		final File inputFile = LocalFileSystem.ApplicationHome().child("btc").child("update.json");
-		final String jsonString = inputFile.readToString();
-		final java.util.List<java.util.Map> list = Json.deserializeFromString(java.util.List.class, jsonString);
-		final List<BTC2> btx = Collections.newList();
-		for (final java.util.Map map : list) {
-			final JsonString json_i = Json.serializeToString(map);
-// L.d("json_i", json_i);
-			final BTC2 btc = Json.deserializeFromString(BTC2.class, json_i);
-			if (btc.percent_change_24h.doubleValue() > 0 || true) {
-				btx.add(btc);
-// L.d(btc.toCSV());
-			}
-		}
-		final List<BTC2> top = btx.copy();
-		final EditableCollection<BTC2> tail = top.splitAt(11);
+
+		final List<Entry> top = Coinmarketcap.getRanking();
+		final EditableCollection<Entry> tail = top.splitAt(11);
 		L.d(" top", top);
 		L.d("tail", tail);
 		tail.sort(by24HGrowth);
@@ -80,7 +39,7 @@ class BTC2 {
 		final int topRank = 40;
 		Set<String> exchange = karaken();
 		exchange = bitfinex();
-		for (final BTC2 c : tail) {
+		for (final Entry c : tail) {
 			if (index <= topRank) {
 				if (pass(c, exchange)) {
 					L.d(c.toCSV());
@@ -96,7 +55,7 @@ class BTC2 {
 
 	}
 
-	private static boolean pass (final BTC2 c, final Set<String> karaken) {
+	private static boolean pass (final Entry c, final Set<String> karaken) {
 		if (!karaken.contains(c.symbol)) {
 			return false;
 		}
@@ -123,10 +82,6 @@ class BTC2 {
 		}
 		return karaken;
 
-	}
-
-	private BigDecimal marketPrice () {
-		return this.price_eur;
 	}
 
 }
