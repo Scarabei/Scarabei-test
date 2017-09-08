@@ -56,10 +56,12 @@ class BTC2 {
 	}
 
 	private static boolean pass (final Entry c, final Set<String> karaken) {
-		if (!karaken.contains(c.symbol)) {
-			return false;
-		}
-		return c.percent_change_24h.doubleValue() > 0 || true;
+		return true;
+// return c.market_cap_eur
+// if (!karaken.contains(c.symbol)) {
+// return false;
+// }
+// return c.percent_change_24h.doubleValue() > 0 || true;
 	}
 
 	public static final Set<String> bitfinex () {

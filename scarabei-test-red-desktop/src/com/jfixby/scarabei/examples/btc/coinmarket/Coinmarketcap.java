@@ -48,7 +48,7 @@ public class Coinmarketcap {
 		final HttpCallProgress result = exe.execute(call);
 		final String response = result.readResultAsString();
 		L.d("response", response);
-		final File storeFile = LocalFileSystem.ApplicationHome().child("btc").child("update.json");
+		final File storeFile = LocalFileSystem.ApplicationHome().child("btc").child(fileName);
 		L.d("writing", storeFile);
 		storeFile.writeString(response);
 	}

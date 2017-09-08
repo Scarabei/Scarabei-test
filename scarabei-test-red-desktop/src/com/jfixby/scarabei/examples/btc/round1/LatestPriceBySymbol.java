@@ -15,8 +15,8 @@ import com.jfixby.scarabei.examples.btc.coinmarket.Entry;
 import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 
 public class LatestPriceBySymbol {
-	final static String bt = "BTC\r\n" + "BCH\r\n" + "DASH\r\n" + "ETH\r\n" + "ZEC\r\n" + "XMR\r\n" + "LTC\r\n" + "ETC\r\n"
-		+ "OMG\r\n" + "EOS\r\n" + "MIOTA\r\n" + "XRP";
+	final static String bt = "BTC\r\n" + "ETH\r\n" + "BCH\r\n" + "XRP\r\n" + "LTC\r\n" + "XEM\r\n" + "DASH\r\n" + "MIOTA\r\n"
+		+ "XMR\r\n" + "ETC\r\n" + "NEO\r\n" + "OMG";
 
 	public static void main (final String[] args) throws IOException {
 		ScarabeiDesktop.deploy();
