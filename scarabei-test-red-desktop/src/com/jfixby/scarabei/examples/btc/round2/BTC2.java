@@ -31,7 +31,7 @@ class BTC2 {
 		SystemSettings.setExecutionMode(ExecutionMode.DEMO);
 
 		final List<Entry> top = Coinmarketcap.getRanking();
-		final EditableCollection<Entry> tail = top.splitAt(11);
+		final EditableCollection<Entry> tail = top.splitAt(10);
 		L.d(" top", top);
 		L.d("tail", tail);
 		tail.sort(by24HGrowth);
@@ -39,9 +39,10 @@ class BTC2 {
 		final int topRank = 40;
 		Set<String> exchange = karaken();
 		exchange = bitfinex();
+		final int limit = 10;
 		for (final Entry c : tail) {
 			if (index <= topRank) {
-				if (pass(c, exchange)) {
+				if (pass(c, exchange) && index <= limit) {
 					L.d(c.toCSV());
 				} else {
 					L.d(c.toCSV(0));
