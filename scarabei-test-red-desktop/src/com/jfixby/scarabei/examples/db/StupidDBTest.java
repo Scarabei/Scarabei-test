@@ -11,21 +11,30 @@ import com.jfixby.scarabei.api.log.L;
 import com.jfixby.scarabei.api.names.Names;
 import com.jfixby.scarabei.red.db.simple.SimpleDB;
 import com.jfixby.scarabei.red.db.simple.SimpleDBConfig;
+import com.jfixby.scarabei.red.db.simple.SimpleTable;
 import com.jfixby.scarabei.red.db.simple.SimpleTableSpecs;
 import com.jfixby.scarabei.red.desktop.ScarabeiDesktop;
 
 public class StupidDBTest {
 
-	public static void main (final String[] args) throws IOException {
+	public static void main(final String[] args) throws IOException {
 		ScarabeiDesktop.deploy();
-// SystemSettings.setExecutionMode(ExecutionMode.DEMO);
+		// SystemSettings.setExecutionMode(ExecutionMode.DEMO);
 
 		final SimpleDBConfig cfg = new SimpleDBConfig();
 		cfg.dbName = Names.newID("test.db");
 		cfg.storageFolder = LocalFileSystem.ApplicationHome().child("dbFolder");
-		cfg.readFromStorage = true;
+
+		final boolean dbFromScratch = !true;
+		if (dbFromScratch) {
+			cfg.storageFolder.clearFolder();
+		}
+
 		final SimpleDB db = new SimpleDB(cfg);
-// db.drop();
+		if (!db.init(true)) {
+			db.init(false);
+		}
+		// db.drop();
 		final String table1name = "table1";
 		{
 			final SimpleTableSpecs specs = db.newTableSpecs();
@@ -34,7 +43,9 @@ public class StupidDBTest {
 			specs.addColumn("x");
 			specs.addColumn("y");
 			specs.addColumn("z");
-// final SimpleTable newTable = db.newTable(specs);
+			if (dbFromScratch) {
+				final SimpleTable newTable = db.newTable(specs);
+			}
 		}
 		final Table table1 = db.getTable(table1name);
 		{
@@ -50,7 +61,7 @@ public class StupidDBTest {
 			final Collection<Entry> all = table1.listAll();
 			L.d("all", all);
 		}
-// table1.clear();
+		// table1.clear();
 		final Collection<Entry> good = table1.findEntries("y", "sdfsdfsdf");
 		L.d("good", good);
 		{
